@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+
+    background-color: hsl(218, 22%, 67%);
+}
+
+.grid-cont{
+    overflow: hidden;
+    width: 80vw;
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.grid-cont > div{
+    padding: 30px;
+}
+
+.grid-item-1{
+    grid-column: 1 / span 2;
+    background-color: hsl(204, 43%, 93%);
+    color: hsl(218, 22%, 67%);
+}
+.grid-item-2{
+    background-color: #2bb3b1;
+    color: rgba(255, 255, 255, 0.6);
+}
+.grid-item-3{
+    background-color: #4abebd;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.butt{
+    display: block;
+    background-color: hsl(71, 73%, 54%);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 4px 4px 10px #249896;
+    cursor: pointer;
+    transition: .3s;
+}
+.butt:hover{
+    transform: translateY(3px);
+    box-shadow: 1px 1px 4px #249896;
+    transition: .6s;
+}
+
+
+.page-title{
+    color: #2bb3b1;
+}
+.green-text{
+    color: hsl(71, 73%, 54%);
+}
+
+.white-text{
+    color: white;
+}
+
+.bigger{
+    font-size: 2em;
+    margin-right: 8px;
+}
+
+.align-text{
+    display: flex;
+    align-items: center;
+}
+
+.tinier{
+    font-size: 1.2em;
+}
+
+@media (max-width: 650px){
+    .grid-cont{
+        width: auto;
+        grid-template-columns: 360px;
+    }
+    .grid-cont > div{
+        padding: 15px;
+    }
+    body{
+        margin: 20px 0;
+    }
+    .grid-item-1{
+        grid-column: unset;
+    }
+}
